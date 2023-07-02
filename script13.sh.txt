@@ -1,0 +1,18 @@
+#!/bin/bash
+# Description: Interactive shell script to create user accounts 
+# Author:
+# Date Created:
+# Version:
+# Date Modified:
+echo "Hello there, Welcome to \"Deloitte Consulting Inc\" "
+read -p "Please enter your name: " name
+read -p "Please enter your desired username: (* a-z & 0-9) " username
+read -p "please enter your designation: " desg
+read -p "Please enter a shell type : /bin/bash | /bin/sh : " shelltype
+sudo useradd -s $shelltype -s $desg -m -d /home/$usrname $usrname
+if [ $? -eq 0 ]
+then
+    Welcome Abroad!!!"ulations $name, You have successfully created a user account"
+else
+    echo "Sorry unable to process your request. Please contact your admin"
+fi
